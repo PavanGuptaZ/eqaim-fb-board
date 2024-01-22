@@ -1,0 +1,249 @@
+.GoBack,
+.Button01 {
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.Button01 {
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+
+    &.type01 {
+        background-color: #AD1FEA;
+
+        &:hover {
+            background-color: #C75AF6;
+        }
+    }
+
+    &.type02 {
+        background-color: #4661E6;
+
+        &:hover {
+            background-color: #7087f5;
+        }
+    }
+
+}
+
+.SortBox {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    position: relative;
+    width: 190px;
+
+    .sortHeading {
+        font-weight: 300;
+        font-size: 0.85rem;
+    }
+
+    .sortSelected {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .sortOptions {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 6px;
+        list-style: none;
+        width: 100%;
+
+        position: absolute;
+        top: 45px;
+        left: 0;
+        background-color: #fff;
+        color: #3A4374;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        z-index: 5;
+
+
+        .sortItem {
+            border-bottom: 1px solid #3A4374;
+            width: 100%;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            user-select: none;
+            cursor: pointer;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                color: #AD1FEA;
+            }
+
+            &.activeSort {
+                .tickIcon {
+                    color: #AD1FEA;
+                }
+            }
+
+            .tickIcon {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.upVoteBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F4FE;
+    width: fit-content;
+    height: fit-content;
+    padding: 12px 12px;
+    width: 50px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #CFD7FF;
+    }
+
+    &.active {
+        background-color: #4661E6;
+        color: #fff;
+    }
+}
+
+.GoBack {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.suggessionItem {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+
+    &.view2 {
+        flex-direction: column;
+
+
+
+        .upVoteBox {
+            display: none;
+        }
+    }
+
+    .type {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &>* {
+            text-transform: capitalize;
+        }
+    }
+
+    .content {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .heading {
+            font-weight: 600;
+        }
+
+        .text {
+            font-weight: 300;
+        }
+
+        .category {
+            background-color: #F2F4FF;
+            width: fit-content;
+            padding: 6px 8px;
+            border-radius: 8px;
+            color: #4661E6;
+        }
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+
+        .upVoteBox {
+            display: none;
+        }
+
+        .commentsCount {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    &.view2 {
+        .content {
+            cursor: pointer;
+        }
+
+        .controls {
+            cursor: pointer;
+
+            .upVoteBox {
+                display: flex;
+            }
+        }
+    }
+
+    &.hoverEffect:hover {
+        .content {
+            cursor: pointer;
+
+            .heading {
+                color: #4661E6;
+            }
+        }
+    }
+
+}
+
+
+@media (max-width:500px) {
+
+    .suggessionItem {
+        &.mobileFit {
+            flex-direction: column;
+
+            .upVoteBox {
+                display: none;
+            }
+
+            .controls {
+                .upVoteBox {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,255 @@
+.RoadMapBox {
+    max-width: 1100px;
+    padding: 16px;
+    margin: auto;
+
+    .header {
+        background-color: #373F68;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+
+        .left {
+            display: grid;
+            gap: 8px;
+
+            .title {
+                font-weight: 600;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .bodyBox {
+        margin: 16px auto;
+        color: #3A4374;
+
+        .viewControlBox {
+            display: none;
+        }
+
+        .titlesBox {
+            display: flex;
+            gap: 16px;
+
+            &>* {
+                width: calc(100% / 3);
+
+                .head {
+                    font-weight: 600;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .suggessionsList {
+            display: flex;
+            gap: 16px;
+            margin: 16px auto;
+
+            &>* {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: calc(100% / 3);
+
+            }
+
+            .nothingMessage {
+                text-align: center;
+                border: 1px solid gray;
+                padding: 1rem;
+            }
+
+            .suggessionItem {
+                background-color: #fff;
+                padding: 24px;
+                border-radius: 4px;
+
+                .type {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    margin-bottom: 12px;
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    cursor: pointer;
+
+                    .heading {
+                        font-weight: 700;
+                        font-size: 24px;
+                    }
+
+                    .category {
+                        width: fit-content;
+                        background-color: #F2F4FF;
+                        padding: 8px 16px;
+                        color: #4661E6;
+                        border-radius: 8px;
+                    }
+
+                    &:hover {
+                        .heading {
+                            color: #4661E6;
+                        }
+                    }
+                }
+
+            }
+
+            .controls {
+                margin-top: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .commentsCount {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+        }
+
+        .suggessionsList {
+            .plannedList {
+                .suggessionItem {
+                    border-top: 5px solid #F49F85;
+
+                    .type {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        margin-bottom: 12px;
+
+                        &>* {
+                            fill: #F49F85;
+                        }
+
+                        &::after {
+                            content: "Planned";
+                        }
+                    }
+                }
+            }
+
+            .inProgressList {
+                .suggessionItem {
+                    border-top: 5px solid #AD1FEA;
+
+                    .type {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        margin-bottom: 12px;
+
+                        &>* {
+                            fill: #AD1FEA;
+                        }
+
+                        &::after {
+                            content: "In-Progress";
+                        }
+                    }
+                }
+            }
+
+            .liveList {
+                .suggessionItem {
+                    border-top: 5px solid #62BCFA;
+
+                    .type {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        margin-bottom: 12px;
+
+                        &>* {
+                            fill: #62BCFA;
+                        }
+
+                        &::after {
+                            content: "Live";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .RoadMapBox {
+        padding: 0;
+
+        .header {
+            border-radius: 0;
+        }
+
+        .bodyBox {
+
+            .viewControlBox {
+                display: flex;
+                justify-content: space-between;
+
+                &>* {
+                    width: calc(100% / 3);
+                    text-align: center;
+                    padding: 8px 0;
+                    cursor: pointer;
+                    user-select: none;
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.299);
+                }
+
+                .planned.active {
+                    border-bottom: 5px solid #F49F85;
+                }
+
+                .inProgress.active {
+                    border-bottom: 5px solid #AD1FEA;
+                }
+
+                .live.active {
+                    border-bottom: 5px solid #62BCFA;
+                }
+
+            }
+
+            .titlesBox {
+                padding: 16px;
+
+                &>* {
+                    display: none;
+                    width: 100%;
+                }
+
+                .active {
+                    display: block;
+                }
+            }
+
+            .suggessionsList {
+                margin-top: 0;
+                padding: 16px;
+
+                &>* {
+                    display: none;
+                    margin: auto;
+                    width: 100%;
+                }
+
+                .active {
+                    display: flex;
+                }
+            }
+        }
+
+    }
+}

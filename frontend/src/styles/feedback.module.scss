@@ -1,0 +1,173 @@
+.newfeedback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 360px;
+    padding: 16px;
+
+
+    .newfeedbackBox {
+        margin: 32px 16px;
+        max-width: 550px;
+        width: 100%;
+
+        .content {
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            color: #3A4374;
+            position: relative;
+            margin-top: 48px;
+
+            .featureIcon {
+                position: absolute;
+                top: -25px;
+                left: 25px;
+            }
+
+            .Heading {
+                font-weight: 600;
+                font-size: 24px;
+                margin: 16px auto;
+            }
+
+            .formBox {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                .inputBox {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    position: relative;
+
+                    .inputLabel {
+                        font-weight: 500;
+                    }
+
+                    .inputArea,
+                    .input {
+                        border: none;
+                        outline: none;
+                        background-color: #F7F8FD;
+                        padding: 16px;
+                        margin-top: 12px;
+                        border-radius: 8px;
+
+                    }
+
+                    .selectInput::part(listbox) {
+                        margin: 1rem;
+                    }
+
+                    .inputArea {
+                        resize: none;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.optionsBox {
+    position: absolute;
+    width: 100%;
+    top: 110%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 5;
+    border-radius: 8px;
+
+    .optionsValue {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.551);
+        padding: 8px 16px;
+        text-transform: capitalize;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+            color: #AD1FEA;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+}
+
+.BTNBox {
+    display: flex;
+    gap: 12px;
+
+    .formBTN {
+        border: none;
+        outline: none;
+        user-select: none;
+        cursor: pointer;
+        background-color: #AD1FEA;
+        color: #fff;
+        padding: 6px 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+
+        &.save {
+            background-color: #AD1FEA;
+
+            &:hover {
+                background-color: #C75AF6;
+            }
+        }
+
+        &.cancel {
+            background-color: #3A4374;
+            margin-left: auto;
+
+            &:hover {
+                background-color: #5c638c;
+            }
+        }
+
+        &.delete {
+            background-color: #D73737;
+
+            &:hover {
+                background-color: #eb6b6b;
+            }
+        }
+
+    }
+}
+
+@media (max-width:500px) {
+    .newfeedback {
+
+        .newfeedbackBox {
+            .content {
+                padding: 32px 16px;
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .BTNBox {
+        display: flex;
+        flex-direction: column;
+
+        .formBTN {
+            justify-content: center;
+
+            &.cancel {
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}

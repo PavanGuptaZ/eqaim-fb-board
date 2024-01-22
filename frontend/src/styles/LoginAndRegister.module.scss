@@ -1,0 +1,127 @@
+.LoginAndRegisterBox {
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.LoginAndRegisterForm {
+    background-color: #fff;
+    max-width: 400px;
+    min-width: 200px;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    .title {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .description {
+        margin: 0 1rem;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 0.5rem;
+
+    .InputBox {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .input {
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 5px;
+            width: 100%;
+            padding: 0.5rem 1rem;
+        }
+
+        .passwordInput {
+            padding-right: 40px;
+        }
+
+        .eyeIcon {
+            cursor: pointer;
+            position: absolute;
+            font-size: 1.25rem;
+            top: 33px;
+            right: 15px;
+            user-select: none;
+        }
+
+        .inputLabel {
+            margin-left: 1rem;
+        }
+
+        .warning {
+            color: rgba(255, 0, 0, 0.75);
+            margin: 0 1rem;
+            text-align: center;
+        }
+    }
+}
+
+.submitButton {
+    cursor: pointer;
+    width: 75px;
+    height: 35px;
+    color: #fff;
+    background-image: linear-gradient(1deg, #058CC4, #0BCDFF 99%);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+    user-select: none;
+
+    &:hover {
+        background-image: linear-gradient(1deg, #058CC4, #0BCDFF 70%);
+    }
+
+    &:focus:not(:active) {
+        box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+    }
+}
+
+@media (max-width:400px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+    }
+}
+
+.changePage {
+    display: flex;
+    gap: 8px;
+    user-select: none;
+
+    .changePageLink {
+        cursor: pointer;
+    }
+
+    &:hover {
+        .changePageLink {
+            text-decoration: underline;
+        }
+
+    }
+}

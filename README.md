@@ -13,11 +13,13 @@
 
 Eqaim is a feedback app developed using the MERN stack, which includes Next.js, TypeScript, SCSS, and MongoDB. This platform is designed to cater to developers, allowing them to contribute valuable suggestions to enhance various aspects of the website, such as improving dark mode or optimizing preview image loading. The website is responsive across different screen sizes, ensuring a seamless user experience. Developers can submit suggestions in different categories, including UI, UX, enhancement, bug, and feature. These suggestions can go through various stages, from the default suggestion status to planning, in-progress, and finally, live. The home screen serves as a central hub where developers can view allsuggestions and upvote suggestions, add comments, and engage in discussions, fostering a collaborative environment for continuous improvement and innovation.
 
-### The challenge
+Sample Images
 
-Users should be able to:
+![eqaim (3)](https://github.com/PavanGuptaZ/eqaim-fb-board/assets/144094802/10f9efe4-340c-42f8-b2b4-f80660b13b9d)
 
-- This is head
+![eqaim (1)](https://github.com/PavanGuptaZ/eqaim-fb-board/assets/144094802/bd12dfd0-25e5-4eb2-97ff-ecd806b2fd4f)
+
+![eqaim (2)](https://github.com/PavanGuptaZ/eqaim-fb-board/assets/144094802/653eca88-7600-45fd-b047-d46ca789ff6b)
 
 ### Suggestions Life Cycle
 
